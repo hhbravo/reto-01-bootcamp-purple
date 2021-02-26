@@ -1,0 +1,41 @@
+DROP TABLE IF EXISTS cards;
+DROP TABLE IF EXISTS parametros;
+DROP TABLE IF EXISTS tea;
+DROP TABLE IF EXISTS cliente;
+
+
+CREATE TABLE parametros
+(
+    id     INT AUTO_INCREMENT PRIMARY KEY,
+    inicio VARCHAR(50) NOT NULL,
+    fin    VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE tea
+(
+    id    INT AUTO_INCREMENT PRIMARY KEY,
+    valor VARCHAR(50) NOT NULL,
+    tasa  VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE cliente
+(
+    id  INT AUTO_INCREMENT PRIMARY KEY,
+    documento VARCHAR(8) NOT NULL
+)
+
+
+CREATE TABLE tarjeta
+(
+    id    INT AUTO_INCREMENT PRIMARY KEY,
+    valor VARCHAR(250) NOT NULL,
+);
+
+
+CREATE TABLE usuario_tarjeta {
+    id INT  AUTO_INCREMENT PRIMARY  KEY ,
+    id_tarjeta INT,
+    id_usuario INT
+    }
+
